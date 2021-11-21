@@ -1,18 +1,60 @@
-.widgetsContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.widgetsContainerprinc{
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    
 }
 
-.user1,.user2,.user3{
+.widgetsContainer1{ /*TOP 10*/
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+}
+
+.widgetsContainer2{ /*NEWS + FEAR + CAPITALISATION*/
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.widgetsContainer3{ /*GRAPHIQUE + WHALE ALERT*/
+    display: flex;
+    flex-direction: row;
+}
+
+.widgetsContainer4{ /*WIDGCONT1 & 2*/
+    display: flex;
+    flex-direction: row;
+}
+
+.widgetsContainer5{ /*TITLE & WIDCONT2*/
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.user2{
+    margin-right: 2%;
+}
+
+.user3{
+    margin-right: 2%;
+}
+
+.user6{ 
+    margin-left: 1%;
+}
+.user1,.user2,.user3,.user4,.user5,.user6{
 
     /*flip card*/
     transform-style: preserve-3d;
-    transition: 2s;
+    transition: 1s;
 
     box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
 }
 
-.user1.flip, .user2.flip, .user3.flip{
+.user1.flip, .user2.flip, .user3.flip, .user4.flip, .user5.flip, .user6.flip{
     transform: rotateY(180deg);
 }

@@ -14,7 +14,6 @@ export default class App extends React.Component {
     render() {
         return (
             <div class="mainContainer">
-                <h1>DASHBOARD CRYPTO</h1>
                 <DashBoard />
             </div>)
     }

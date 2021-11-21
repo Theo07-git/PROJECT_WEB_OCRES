@@ -10,14 +10,14 @@ export default class Widgets extends React.Component {
         const { width, height, title, backText } = this.props;
 
         return (
-            <div className='widget' style={{width : width, height: height}}>
+            <div className='widget' style={{ width: width, height: height }}>
                 <div className='widgets'>
                     <h1>{title}</h1>
                 </div>
                 <div className='widgets widarriere'>
-                    <p>{backText}</p>
+                    <p className='backText'>{backText}</p>
                 </div>
             </div>
-            )
+        )
     }
 }

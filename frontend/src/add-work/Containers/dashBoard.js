@@ -10,7 +10,10 @@ export default class DashBoard extends React.Component {
             backgroundColor: 'white',
             isCardFliped1: false,
             isCardFliped2: false,
-            isCardFliped3: false
+            isCardFliped3: false,
+            isCardFliped4: false,
+            isCardFliped5: false,
+            isCardFliped6: false
         }
 
     }
@@ -25,18 +28,47 @@ export default class DashBoard extends React.Component {
     flipCard3() {
         this.setState((prevState) => ({ isCardFliped3: !prevState.isCardFliped3 }))
     }
+    flipCard4() {
+        this.setState((prevState) => ({ isCardFliped4: !prevState.isCardFliped4 }))
+    }
+    flipCard5() {
+        this.setState((prevState) => ({ isCardFliped5: !prevState.isCardFliped5 }))
+    }
+    flipCard6() {
+        this.setState((prevState) => ({ isCardFliped6: !prevState.isCardFliped6 }))
+    }
 
     render() {
         return (
-            <div className='widgetsContainer'>
-                <div className={`user1 ${this.state.isCardFliped1 ? 'flip' : ''}`} onClick={() => this.flipCard1()}>
-                    <Widgets width={"10em"} height={"100px"} title={"CRYPTO"} backText={"Voici la face arrière avec le texte explicatif de ce qui est montré"}/>
+            <div className='widgetsContainerprinc'>
+                <div className='widgetsContainer4'>
+                    <div className='widgetsContainer1'>
+                        <div className={`user1 ${this.state.isCardFliped1 ? 'flip' : ''}`} onClick={() => this.flipCard1()}>
+                            <Widgets width={"50vh"} height={"60vh"} title={"TOP10"} backText={"Ce widget présente le Top 10 des crypto-monnaies avec la plus grande capitalisation de marché. Pour chaque crypto-monnaie, on retrouveson logo, son nom, son prix actuel et son evolution en pourcentage sur 24H."} />
+                        </div>
+                    </div>
+                    <div className='widgetsContainer5'>
+                        <text class='Title'>DASHBOARD CRYPTO</text>
+                        <div className='widgetsContainer2'>
+                            <div className={`user2 ${this.state.isCardFliped2 ? 'flip' : ''}`} onClick={() => this.flipCard2()}>
+                                <Widgets width={"44vh"} height={"40vh"} title={"NEWS"} backText={"Ce widget présente les une nouvelle de l'actualité des crypto-monnaies. En cliquant sur le lien, une page s'ouvre vers l'article. "} />
+                            </div>
+                            <div className={`user3 ${this.state.isCardFliped3 ? 'flip' : ''}`} onClick={() => this.flipCard3()}>
+                                <Widgets width={"43vh"} height={"40vh"} title={"FEAR & GREED"} backText={"Ce widget présente un indicateur d'émotion du marché. Il est basé sur la volatilité, des sondages, le momentom et aussi Google trends pour les mots bitcoin ou crypto."} />
+                            </div>
+                            <div className={`user4 ${this.state.isCardFliped4 ? 'flip' : ''}`} onClick={() => this.flipCard4()}>
+                                <Widgets width={"44vh"} height={"40vh"} title={"CAPITALISATION"} backText={"Ce widget présente un diagramme circulaire représentant les 10 plus grosses cryptomonnaies selon leur taille en capitalisation boursière."} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className={`user2 ${this.state.isCardFliped2 ? 'flip' : ''}`} onClick={() => this.flipCard2()}>
-                    <Widgets width={"200px"} height={"200px"} title={"AUTRE"} backText={"Voici la face arrière avec le texte explicatif de ce qui est montré"}/>
-                </div>
-                <div className={`user3 ${this.state.isCardFliped3 ? 'flip' : ''}`} onClick={() => this.flipCard3()}>
-                    <Widgets width={"200px"} height={"200px"} title={"essaie"} backText={"Voici la face arrière avec le texte explicatif de ce qui est montré"}/>
+                <div className='widgetsContainer3'>
+                    <div className={`user5 ${this.state.isCardFliped5 ? 'flip' : ''}`} onClick={() => this.flipCard5()}>
+                        <Widgets width={"120vh"} height={"30vh"} title={"GRAPHIQUE"} backText={"Ce widget présente un graphique représentant une courbe. Cette dernière représente l'évolution du cours du Bitcoin au fil du temps. Le Bitcoin est la crypto-monnaie numéro 1 en terme de capitalisation boursière: il influence le cours des autres crypto-monnaies."} />
+                    </div>
+                    <div className={`user6 ${this.state.isCardFliped6 ? 'flip' : ''}`} onClick={() => this.flipCard6()}>
+                        <Widgets width={"67vh"} height={"30vh"} title={"WHALE ALERT"} backText={"Ce widget présente des messages indiquant les transactions importantes et intéressantes au fur et à mesure qu'elles se produisent. Il permet de savoir quand les gros portefeuilles font des transactions."} />
+                    </div>
                 </div>
             </div>
 
