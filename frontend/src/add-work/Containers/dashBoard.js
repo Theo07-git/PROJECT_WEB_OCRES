@@ -38,9 +38,7 @@ export default class DashBoard extends React.Component {
     }
 
     render() {
-
         const{ top10Data, capData } = this.props;
-
         return (
             <div className='widgetsContainerprinc'>
                 <div className='widgetsContainer4'>
@@ -70,6 +68,7 @@ export default class DashBoard extends React.Component {
                     </div>
                     <div className={`widget6 ${this.state.isCardFliped6 ? 'flip' : ''}`} onClick={() => this.flipCard6()}>
                         <Widgets width={"67vh"} height={"30vh"} title={"WHALE ALERT"} backText={"Ce widget présente des messages indiquant les transactions importantes et intéressantes au fur et à mesure qu'elles se produisent. Il permet de savoir quand les gros portefeuilles font des transactions."} widgetType={"WHALE"} data={top10Data}/>
+
                     </div>
                 </div>
             </div>

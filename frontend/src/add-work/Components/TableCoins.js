@@ -34,3 +34,31 @@ const TableCoins = ({ coins }) => {
 };
 
 export default TableCoins;
+/*
+
+const { image, name, symbol, current_price, priceChange } = this.props;
+
+return (
+    <div className='widget'>
+        <table>
+            <thead>
+            <tr>
+                <th>LOGO</th>
+                <th>NAME</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>24H change</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{image}</td>
+                <td>{name}</td>
+                <td>{symbol}</td>
+                <td>{current_price}</td>
+                <td>{priceChange}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+)*/

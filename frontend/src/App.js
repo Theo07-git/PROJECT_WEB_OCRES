@@ -23,7 +23,6 @@ function App() {
     }, []);
 
     return (
-
         <div className="App">
             <Content top10Data={coins} capData={coins}/>
         </div>
