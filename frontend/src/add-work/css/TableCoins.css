@@ -1,0 +1,44 @@
+.table{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1a1c;
+    color: #fff;
+    border-radius: 15px;
+  }
+
+.text-sucess{
+    color: green;
+    text-align: end;
+    padding-right: 4%;
+}
+
+.text-danger{
+    color: red;
+    text-align: end;
+    padding-right: 4%;
+}
+
+.prix{
+    text-align: start;
+}
+
+.logo-nom{
+    text-align: start;
+    
+
+}
+
+.namecrypto{
+    margin-left: 30%;
+    justify-content: top;
+}
+
+
+
+
+
+
+
+

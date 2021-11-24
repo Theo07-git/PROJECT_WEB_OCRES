@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/TableCoins.css';
 
 const titles = ["#", "Coin", "Price", "Price Change"];
 
@@ -9,27 +10,31 @@ const TableCoins = ({ coins }) => {
     return (
         <table className="table table-dark mt-4 table-hover">
             <thead>
-            <tr>
-                {titles.map((title, i) => (
-                    <td key={i}>{title}</td>
-                ))}
-            </tr>
+                <tr>
+                    {titles.map((title, i) => (
+                        <td key={i}>{title}</td>
+                    ))}
+                </tr>
             </thead>
             <tbody>
-            {coins.map((coin, index) => (
-                /*<CoinRow key={coin.id} coin={coin} index={index + 1} />*/
-                <tr>
-                    <td className="text-muted">{index + 1}</td>
-                    <td>
-                        <img src={coin.image} alt="" className="img-fluid me-4" style={{ width: "12%" }}/>
-                        <span>{coin.name}</span>
-                    </td>
-                    <td>${coin.current_price}</td>
-                    <td>{Number(coin.price_change_percentage_24h).toFixed(2)}%</td>
-                </tr>
-            ))}
+                {coins.map((coin, index) => (
+                    /*<CoinRow key={coin.id} coin={coin} index={index + 1} />*/
+                    <tr className="ligne">
+                        <td className="text-muted">{index + 1}</td>
+                        <td className="logo-nom">
+                            <img src={coin.image} alt="" className="img-fluid me-4" style={{ width: "12%" }} />
+
+                            <span className='namecrypto'>{coin.name}</span>
+                        </td>
+                        <td className='prix'>${coin.current_price}</td>
+                        <td className={coin.price_change_percentage_24h > 0 ? 'text-sucess' : 'text-danger'}>
+                            {Number(coin.price_change_percentage_24h).toFixed(2)}%</td>
+                    </tr>
+                ))}
+
             </tbody>
-        </table>
+        </table >
+
     );
 };
 
