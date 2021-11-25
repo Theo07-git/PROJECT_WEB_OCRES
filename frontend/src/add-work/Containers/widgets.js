@@ -39,8 +39,7 @@ function getWidgetType(wigetType, data){
     }else if(wigetType==="FEAR"){
         return(
             <div>
-                <FearAndGreed/>
-                <h1>Job still To Be Done</h1>
+                <FearAndGreed data={data}/>
             </div>
         )
     }else if(wigetType==="CAP"){

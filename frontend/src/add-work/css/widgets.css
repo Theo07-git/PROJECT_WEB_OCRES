@@ -35,4 +35,5 @@
 .widarriere{
     transform: rotateY(180deg);
     background-color: #61dafb;
+    z-index:2;
 }
