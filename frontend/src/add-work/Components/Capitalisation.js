@@ -25,7 +25,7 @@ export default class Capitalisation extends React.Component {
         }
 
         return (
-            <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
+            <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
                 <Pie
                     data={capData}
                     cx={150}
@@ -35,6 +35,7 @@ export default class Capitalisation extends React.Component {
                     fill="#8884d8"
                     paddingAngle={5}
                     dataKey="value"
+                    label
                 >
                     {data.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

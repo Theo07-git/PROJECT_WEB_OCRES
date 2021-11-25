@@ -5,8 +5,13 @@
     font-family: 'Montserrat', sans-serif;
     background-color: #1a1a1c;
     color: #fff;
-    border-radius: 15px;
-  }
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px none white;
+    border-bottom-style: solid;
+}
+
 
 .text-sucess{
     color: green;
