@@ -1,5 +1,5 @@
 import React from "react";
-import {PieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { PieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import img from "../img/aiguille2.png"
 import "../css/FearAndGreed.css"
 
@@ -32,12 +32,12 @@ export default class FearAndGreed extends React.Component {
     render() {
         const { data } = this.props;
         const dataUseable = [{ name: data.value_classification, value: data.value }]
-        let angle = ((dataUseable[0].value)*1.8)-90;
+        let angle = ((dataUseable[0].value) * 1.8) - 90;
         const colorText = getColorText(dataUseable[0].name);
         return (
             <div className={"PieChartContainer"}>
 
-                <img className={"aiguille"} src={img} width={"10%"} height={"32%"} style={{transform: `rotateZ(${angle}deg)`}}/>
+                <img className={"aiguille"} src={img} width={"10%"} height={"32%"} style={{ transform: `rotateZ(${angle}deg)` }} />
 
                 <PieChart width={310} height={150} onMouseEnter={this.onPieEnter}>
                     <Pie
@@ -56,9 +56,9 @@ export default class FearAndGreed extends React.Component {
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                     </Pie>
+                    `<Tooltip content={<this.CustomTooltip />} />`
                 </PieChart>
-                `<Tooltip content={<this.CustomTooltip />} />`
-                <h1 style={{color: colorText}}>{dataUseable[0].name} : {dataUseable[0].value}</h1>
+                <h1 style={{ color: colorText }}>{dataUseable[0].name} : {dataUseable[0].value}</h1>
             </div>
         );
     }
@@ -66,19 +66,19 @@ export default class FearAndGreed extends React.Component {
 
 function getColorText(type) {
     let colorText = "";
-    if(type === "Extreme Fear"){
+    if (type === "Extreme Fear") {
         colorText = '#fe1500';
         return colorText;
-    } else if(type === "Fear"){
+    } else if (type === "Fear") {
         colorText = '#ff8f00';
         return colorText;
-    } else if(type === "Neutral"){
+    } else if (type === "Neutral") {
         colorText = '#ebf211';
         return colorText;
-    } else if(type === "Greed"){
+    } else if (type === "Greed") {
         colorText = '#b4ff28';
         return colorText;
-    } else if(type === "Extreme Greed") {
+    } else if (type === "Extreme Greed") {
         colorText = '#389900';
         return colorText;
     }
