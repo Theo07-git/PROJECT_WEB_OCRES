@@ -4,6 +4,7 @@ import TableCoins from "../Components/TableCoins";
 import Capitalisation from "../Components/Capitalisation";
 import FearAndGreed from "../Components/FearAndGreed";
 import Graphique from "../Components/Graphique";
+import CoinInfo from "../Components/CoinInfo";
 
 export default class Widgets extends React.Component {
     constructor(props) {
@@ -12,7 +13,6 @@ export default class Widgets extends React.Component {
 
     render() {
         const { width, height, title, backText, widgetType, data } = this.props;
-
         return (
             <div className='widget' style={{ width: width, height: height }}>
                 <div className='widgets'>
@@ -48,7 +48,8 @@ function getWidgetType(wigetType, data){
         )
     }else if(wigetType==="GRAPH"){
         return(
-            <Graphique/>
+            <CoinInfo coin={data}/>
+            //<Graphique />
         )
     }else if(wigetType==="WHALE"){
         return(

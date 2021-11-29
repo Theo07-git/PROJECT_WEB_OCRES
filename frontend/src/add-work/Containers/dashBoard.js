@@ -38,7 +38,7 @@ export default class DashBoard extends React.Component {
     }
 
     render() {
-        const{ top10Data, fear } = this.props;
+        const{ top10Data, fear, graph } = this.props;
         return (
             <div className='widgetsContainerprinc'>
                 <div className='widgetsContainer4'>
@@ -48,7 +48,7 @@ export default class DashBoard extends React.Component {
                         </div>
                     </div>
                     <div className='widgetsContainer5'>
-                        <text class='Title'>DASHBOARD CRYPTO</text>
+                        <p className='Title'>DASHBOARD CRYPTO</p>
                         <div className='widgetsContainer2'>
                             <div className={`widget2 ${this.state.isCardFliped2 ? 'flip' : ''}`} onClick={() => this.flipCard2()}>
                                 <Widgets width={"44vh"} height={"40vh"} title={"NEWS"} backText={"Ce widget présente les une nouvelle de l'actualité des crypto-monnaies. En cliquant sur le lien, une page s'ouvre vers l'article. "} widgetType={"NEWS"} data={top10Data}/>
@@ -63,8 +63,8 @@ export default class DashBoard extends React.Component {
                     </div>
                 </div>
                 <div className='widgetsContainer3'>
-                    <div className={`widget5 ${this.state.isCardFliped5 ? 'flip' : ''}`} onClick={() => this.flipCard5()}>
-                        <Widgets width={"120vh"} height={"30vh"} title={"GRAPHIQUE"} backText={"Ce widget présente un graphique représentant une courbe. Cette dernière représente l'évolution du cours du Bitcoin au fil du temps. Le Bitcoin est la crypto-monnaie numéro 1 en terme de capitalisation boursière: il influence le cours des autres crypto-monnaies."} widgetType={"GRAPH"} data={top10Data}/>
+                    <div className={`widget5`} onClick={() => this.flipCard5()}>
+                        <Widgets width={"200vh"} height={"100vh"} title={"GRAPHIQUE"} backText={"Ce widget présente un graphique représentant une courbe. Cette dernière représente l'évolution du cours du Bitcoin au fil du temps. Le Bitcoin est la crypto-monnaie numéro 1 en terme de capitalisation boursière: il influence le cours des autres crypto-monnaies."} widgetType={"GRAPH"} data={graph}/>
                     </div>
                     <div className={`widget6 ${this.state.isCardFliped6 ? 'flip' : ''}`} onClick={() => this.flipCard6()}>
                         <Widgets width={"67vh"} height={"30vh"} title={"WHALE ALERT"} backText={"Ce widget présente des messages indiquant les transactions importantes et intéressantes au fur et à mesure qu'elles se produisent. Il permet de savoir quand les gros portefeuilles font des transactions."} widgetType={"WHALE"} data={top10Data}/>

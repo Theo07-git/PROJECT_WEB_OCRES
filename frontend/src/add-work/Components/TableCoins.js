@@ -19,7 +19,7 @@ const TableCoins = ({ coins }) => {
             <tbody>
                 {coins.map((coin, index) => (
                     /*<CoinRow key={coin.id} coin={coin} index={index + 1} />*/
-                    <tr className="ligne">
+                    <tr key={coin.id} className="ligne">
                         <td className="text-muted">{index + 1}</td>
                         <td className="logo-nom">
                             <img src={coin.image} alt="" className="img-fluid me-4" style={{ width: "12%" }} />
