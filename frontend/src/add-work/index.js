@@ -11,11 +11,11 @@ export default class App extends React.Component {
     }
 
     render() {
-        const{ top10Data, fear, graph } = this.props;
+        const{ top10Data, fear } = this.props;
 
         return (
             <div className="mainContainer">
-                <DashBoard top10Data={top10Data} fear={fear} graph={graph}/>
+                <DashBoard top10Data={top10Data} fear={fear}/>
             </div>)
     }
 }

@@ -48,7 +48,7 @@ function getWidgetType(wigetType, data){
         )
     }else if(wigetType==="GRAPH"){
         return(
-            <CoinInfo coin={data}/>
+            <CoinInfo />
             //<Graphique />
         )
     }else if(wigetType==="WHALE"){

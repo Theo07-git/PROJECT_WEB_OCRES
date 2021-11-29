@@ -38,7 +38,7 @@ export default class DashBoard extends React.Component {
     }
 
     render() {
-        const{ top10Data, fear, graph } = this.props;
+        const{ top10Data, fear } = this.props;
         return (
             <div className='widgetsContainerprinc'>
                 <div className='widgetsContainer4'>
@@ -64,7 +64,7 @@ export default class DashBoard extends React.Component {
                 </div>
                 <div className='widgetsContainer3'>
                     <div className={`widget5`} onClick={() => this.flipCard5()}>
-                        <Widgets width={"200vh"} height={"100vh"} title={"GRAPHIQUE"} backText={"Ce widget présente un graphique représentant une courbe. Cette dernière représente l'évolution du cours du Bitcoin au fil du temps. Le Bitcoin est la crypto-monnaie numéro 1 en terme de capitalisation boursière: il influence le cours des autres crypto-monnaies."} widgetType={"GRAPH"} data={graph}/>
+                        <Widgets width={"100vh"} height={"20vh"} title={"GRAPHIQUE"} backText={"Ce widget présente un graphique représentant une courbe. Cette dernière représente l'évolution du cours du Bitcoin au fil du temps. Le Bitcoin est la crypto-monnaie numéro 1 en terme de capitalisation boursière: il influence le cours des autres crypto-monnaies."} widgetType={"GRAPH"}/>
                     </div>
                     <div className={`widget6 ${this.state.isCardFliped6 ? 'flip' : ''}`} onClick={() => this.flipCard6()}>
                         <Widgets width={"67vh"} height={"30vh"} title={"WHALE ALERT"} backText={"Ce widget présente des messages indiquant les transactions importantes et intéressantes au fur et à mesure qu'elles se produisent. Il permet de savoir quand les gros portefeuilles font des transactions."} widgetType={"WHALE"} data={top10Data}/>

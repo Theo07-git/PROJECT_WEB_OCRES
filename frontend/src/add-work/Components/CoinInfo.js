@@ -5,27 +5,24 @@ import {chartDays} from "../config/data";
 import SelectButton from "./SelectButton";
 
 import { Chart, registerables } from 'chart.js';
+import axios from "axios";
+import {HistoricalChart} from "../config/api";
 Chart.register(...registerables);
 
-const CoinInfo = ({ coin }) => {
+const CoinInfo = ({}) => {
     const [days, setDays] = useState(1);
+    const [coin, setCoin] = useState();
 
-    //const [historicData, setHistoricData] = useState();
-
-    console.log("CoinInfo", coin);
-
-    //setHistoricData(coin);
-
-   /* const fetchHistoricData = async () => {
-        const { data } = await axios.get(HistoricalChart());
+   const fetchHistoricData = async () => {
+        const { data } = await axios.get(HistoricalChart("bitcoin", days));
         console.log(data);
-        setHistoricData(data.prices);
+        setCoin(data.prices);
     };
 
     useEffect(() => {
         fetchHistoricData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [days]);*/
+    }, [days]);
 
     const useStyles = makeStyles((theme) => ({
         container: {
