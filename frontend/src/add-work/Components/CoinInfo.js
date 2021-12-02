@@ -15,7 +15,6 @@ const CoinInfo = ({}) => {
 
    const fetchHistoricData = async () => {
         const { data } = await axios.get(HistoricalChart("bitcoin", days));
-        console.log(data);
         setCoin(data.prices);
     };
 
@@ -26,7 +25,7 @@ const CoinInfo = ({}) => {
 
     const useStyles = makeStyles((theme) => ({
         container: {
-            width: "75%",
+            width: "70%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",

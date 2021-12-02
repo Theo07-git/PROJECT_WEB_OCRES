@@ -5,6 +5,7 @@ import Capitalisation from "../Components/Capitalisation";
 import FearAndGreed from "../Components/FearAndGreed";
 import Graphique from "../Components/Graphique";
 import CoinInfo from "../Components/CoinInfo";
+import News from "../Components/News";
 
 export default class Widgets extends React.Component {
     constructor(props) {
@@ -34,7 +35,7 @@ function getWidgetType(wigetType, data){
         )
     }else if(wigetType==="NEWS"){
         return(
-            <h1>Job still To Be Done</h1>
+            <News news={data}/>
         )
     }else if(wigetType==="FEAR"){
         return(

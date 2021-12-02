@@ -38,7 +38,7 @@ export default class DashBoard extends React.Component {
     }
 
     render() {
-        const{ top10Data, fear } = this.props;
+        const{ top10Data, fear, news } = this.props;
         return (
             <div className='widgetsContainerprinc'>
                 <div className='widgetsContainer4'>
@@ -51,7 +51,7 @@ export default class DashBoard extends React.Component {
                         <p className='Title'>DASHBOARD CRYPTO</p>
                         <div className='widgetsContainer2'>
                             <div className={`widget2 ${this.state.isCardFliped2 ? 'flip' : ''}`} onClick={() => this.flipCard2()}>
-                                <Widgets width={"44vh"} height={"40vh"} title={"NEWS"} backText={"Ce widget présente les une nouvelle de l'actualité des crypto-monnaies. En cliquant sur le lien, une page s'ouvre vers l'article. "} widgetType={"NEWS"} data={top10Data}/>
+                                <Widgets width={"44vh"} height={"40vh"} title={"NEWS"} backText={"Ce widget présente les une nouvelle de l'actualité des crypto-monnaies. En cliquant sur le lien, une page s'ouvre vers l'article. "} widgetType={"NEWS"} data={news}/>
                             </div>
                             <div className={`widget3 ${this.state.isCardFliped3 ? 'flip' : ''}`} onClick={() => this.flipCard3()}>
                                 <Widgets width={"43vh"} height={"40vh"} title={"FEAR & GREED"} backText={"Ce widget présente un indicateur d'émotion du marché. Il est basé sur la volatilité, des sondages, le momentom et aussi Google trends pour les mots bitcoin ou crypto."} widgetType={"FEAR"} data={fear}/>
@@ -72,8 +72,6 @@ export default class DashBoard extends React.Component {
                     </div>
                 </div>
             </div>
-
-
         )
     }
 }
