@@ -59,7 +59,7 @@ export default class FearAndGreed extends React.Component {
                     `<Tooltip content={<this.CustomTooltip />} />`
                 </PieChart>
                 <h1 style={{ color: colorText }}>{dataUseable[0].name} : {dataUseable[0].value}</h1>
-            </div>
+            </div >
         );
     }
 }
