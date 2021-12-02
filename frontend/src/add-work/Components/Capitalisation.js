@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { Legend } from "recharts";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip } from 'recharts';
-import '../css/FearAndGreed.css';
+import '../css/Capitalisation.css';
 
 
 const test = [
@@ -50,26 +50,28 @@ export default class Capitalisation extends React.Component {
         }
 
         return (
-            <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
-                <Pie
-                    data={capData}
-                    cx={150}
-                    cy={80}
-                    innerRadius={40}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    paddingAngle={0}
-                    dataKey="value"
+            <div className={"PieChartContainer2"}>
+                <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
+                    <Pie
+                        data={capData}
+                        cx={150}
+                        cy={80}
+                        innerRadius={40}
+                        outerRadius={80}
+                        fill="#8884d8"
+                        paddingAngle={0}
+                        dataKey="value"
 
-                >
-                    {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    >
+                        {data.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
 
-                    ))}
-                </Pie>
-                `<Tooltip content={<this.CustomTooltip />} />`
-                <Legend color='white' />
-            </PieChart>
+                        ))}
+                    </Pie>
+                    `<Tooltip content={<this.CustomTooltip />} width={"200%"} />`
+                    <Legend text-align={"center"} width={"60%"} />
+                </PieChart>
+            </div>
         );
     }
 }

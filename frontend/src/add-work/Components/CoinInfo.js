@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import {Line} from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
 import { CircularProgress, makeStyles } from "@material-ui/core";
-import {chartDays} from "../config/data";
+import { chartDays } from "../config/data";
 import SelectButton from "./SelectButton";
 
 import { Chart, registerables } from 'chart.js';
 import axios from "axios";
-import {HistoricalChart} from "../config/api";
+import { HistoricalChart } from "../config/api";
 Chart.register(...registerables);
 
-const CoinInfo = ({}) => {
+const CoinInfo = ({ }) => {
     const [days, setDays] = useState(1);
     const [coin, setCoin] = useState();
 
-   const fetchHistoricData = async () => {
+    const fetchHistoricData = async () => {
         const { data } = await axios.get(HistoricalChart("bitcoin", days));
         console.log(data);
         setCoin(data.prices);
@@ -26,17 +26,18 @@ const CoinInfo = ({}) => {
 
     const useStyles = makeStyles((theme) => ({
         container: {
-            width: "75%",
+            width: "100%",
+            height: "85%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            marginTop: 25,
-            padding: 40,
+            /*marginTop: 25,
+            padding: 40,*/
             [theme.breakpoints.down("md")]: {
                 width: "100%",
                 marginTop: 0,
-                padding: 20,
+                /*padding: 20,*/
                 paddingTop: 0,
             },
         },
@@ -45,7 +46,7 @@ const CoinInfo = ({}) => {
     const classes = useStyles();
 
     return (
-            //<div className={"lineChart"}>
+        //<div className={"lineChart"}>
         <div className={classes.container}>
             {!coin ? (
                 <CircularProgress
@@ -85,9 +86,8 @@ const CoinInfo = ({}) => {
                     <div
                         style={{
                             display: "flex",
-                            marginTop: 20,
                             justifyContent: "space-around",
-                            width: "100%",
+                            width: "100%", /*barre en dessous*/
                         }}
                     >
                         {chartDays.map((day) => (

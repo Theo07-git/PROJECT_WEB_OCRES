@@ -12,11 +12,11 @@ export default class Widgets extends React.Component {
     }
 
     render() {
-        const { width, height, title, backText, widgetType, data } = this.props;
+        const { width, height, mediaWidth, title, backText, widgetType, data } = this.props;
         return (
             <div className='widget' style={{ width: width, height: height }}>
                 <div className='widgets'>
-                    <h1>{title}</h1>
+                    <p class="TitleWid">{title}</p>
                     {getWidgetType(widgetType, data)}
                 </div>
                 <div className='widgets widarriere'>
@@ -27,32 +27,32 @@ export default class Widgets extends React.Component {
     }
 }
 
-function getWidgetType(wigetType, data){
-    if(wigetType==="TOP10"){
-        return(
-            <TableCoins coins={data}/>
+function getWidgetType(wigetType, data) {
+    if (wigetType === "TOP10") {
+        return (
+            <TableCoins coins={data} />
         )
-    }else if(wigetType==="NEWS"){
-        return(
+    } else if (wigetType === "NEWS") {
+        return (
             <h1>Job still To Be Done</h1>
         )
-    }else if(wigetType==="FEAR"){
-        return(
+    } else if (wigetType === "FEAR") {
+        return (
             <div>
-                <FearAndGreed data={data}/>
+                <FearAndGreed data={data} />
             </div>
         )
-    }else if(wigetType==="CAP"){
-        return(
-            <Capitalisation data={data}/>
+    } else if (wigetType === "CAP") {
+        return (
+            <Capitalisation data={data} />
         )
-    }else if(wigetType==="GRAPH"){
-        return(
+    } else if (wigetType === "GRAPH") {
+        return (
             <CoinInfo />
             //<Graphique />
         )
-    }else if(wigetType==="WHALE"){
-        return(
+    } else if (wigetType === "WHALE") {
+        return (
             <h1>Job still To Be Done</h1>
         )
     }
