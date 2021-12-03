@@ -1,4 +1,4 @@
-.mainContent {
+/*.mainContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,10 +6,10 @@
     min-width: 300px;
     max-width: 900px;
     margin: auto;
-}
+}*/
 
 .Title{
-    font-size: 450%;
+    font-size: 200%;
     text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
     font-family:"Segoe print", Arial, Helvetica, sans-serif;
     color: #dd0000;
@@ -28,25 +28,27 @@
 .mainContainer{
     
     background-color: rgb(60, 63, 65);    
-    width: 98%;
-    height: 95vh;
+    width: 96%;
+    height: 99%;
     position: relative;
-    border: 5px solid rgb(60, 63, 65); /*arrondi noir autour*/
+    margin: 1%;
+    padding: 1%;
+    border-radius: 15px;
+    /*border: 5px solid rgb(60, 63, 65); /*arrondi noir autour*/
     /*border-image: linear-gradient(355deg,#333333, #dd1818 );
     /*border-image-slice: 1;
     /*border-style: outset;*/
   
     
     /*padding: 1em;*/
-    border-radius: 30px;
-    margin: 1%;
+    /*border-radius: 30px;*/
     cursor: pointer; /*souris plus jolie*/
 }
 
  
 .mainContainer::before,
 .mainContainer::after {
-  content: '';
+  /*content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -58,7 +60,7 @@
   background-size: 500%;
   animation: animate 40s infinite;
   border-radius: 30px;
-  margin-left: 0.5%;
+  margin-left: 0.5%;*/
 }
 
 .mainContainer::after {

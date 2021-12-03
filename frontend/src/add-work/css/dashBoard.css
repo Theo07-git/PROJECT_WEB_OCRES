@@ -6,46 +6,135 @@
     
 }
 
+
 .widgetsContainer1{ /*TOP 10*/
     display: flex;
     flex-direction: row;
-    margin-bottom: 1%;
-}
-
-.widgetsContainer2{ /*NEWS + FEAR + CAPITALISATION*/
-    display: flex;
-    flex-direction: row;
+    /*min-width: 350px;*/
     margin-left: 2%;
-    margin-top: 2%;
 }
 
-.widgetsContainer3{ /*GRAPHIQUE + WHALE ALERT*/
+.widgetsContainer2{ /*NEWS + FEAR + CAPITALISATION + WHALE*/
     display: flex;
     flex-direction: row;
-}
-
-.widgetsContainer4{ /*WIDGCONT1 & 2*/
-    display: flex;
-    flex-direction: row;
-}
-
-.widgetsContainer5{ /*TITLE & WIDCONT2*/
-    display: flex;
-    flex-direction: column;
+    margin: 1%;
+    justify-content: space-around;
     
 }
 
-.widget2{
-    margin-right: 2%;
+.widgetsContainer3{ /*GRAPHIQUE*/
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.widgetsContainer4{ /*TOP 10 + GRAPH*/
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.widgetsContainer5{
+    display: flex;
+    flex-direction: row;
+    /*margin-right: 1%;*/
+    justify-content: space-around;
+    width: 45vw;
+    
+}
+
+.widgetsContainer6{
+    display: flex;
+    flex-direction: row;
+    /*margin-left: 1%;*/
+    justify-content: space-around;   
+}
+
+@media screen and (max-width:1200px){ /*Première réduction*/
+    .widgetsContainer2{ /*4 wid*/
+        display: flex;
+        flex-direction: column;
+        margin-top: 10% !important;
+    }
+
+    .widgetsContainer5{ /*NEWS AND FEAR*/
+        /*justify-content: space-around; */
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2%;
+        justify-content: start;
+
+    }
+
+    .widgetsContainer4{ /*TOP 10 + GRAPH*/
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+@media screen and (max-width:1000px){ /*Deuxième reduction*/
+    .widgetsContainer4{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*@media screen and (max-width:1000px){
+    .widgetsContainer4{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-items: center;
+        
+    }
+
+    .widgetsContainer3{     /*ICIIIIIIIIII
+        justify-content: space-around;
+        margin-bottom: 3%;
+    }
+
+    
+}
+*/
+
+/*@media screen and (max-width:1200px){
+    .widgetsContainer2{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .widgetsContainer5{
+        display: flex;
+        flex-direction: column;
+        margin : 0 auto;
+        margin-bottom: 1%;
+        
+    }
+
+    .widgetsContainer6{
+        display: flex;
+        flex-direction: column; 
+        margin : 0 auto;
+        margin-bottom: 1%;
+        
+    }
+
+}*/
+
+.widget1{
+    
 }
 
 .widget3{
+    margin-left: 2%;
+    
+}
+
+.widget4{
     margin-right: 2%;
 }
 
-.widget6{ 
-    margin-left: 1%;
-}
 .widget1,.widget2,.widget3,.widget4,.widget5,.widget6{
 
     /*flip card*/

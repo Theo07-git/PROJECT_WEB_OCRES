@@ -7,3 +7,8 @@
     margin-top: 25px;
     padding: 40px;
 }
+
+.box{
+    position: relative;
+    left: 80%;
+}

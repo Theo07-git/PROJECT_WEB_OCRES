@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "axios": "^0.24.0",
     "coingecko-api": "^1.0.10",
     "recharts": "^2.1.6"

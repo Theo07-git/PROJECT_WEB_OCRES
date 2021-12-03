@@ -1,42 +1,46 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {Line} from 'react-chartjs-2'
-import { CircularProgress, makeStyles } from "@material-ui/core";
+import {CircularProgress, makeStyles} from "@material-ui/core";
 import {chartDays} from "../config/data";
 import SelectButton from "./SelectButton";
 
-import { Chart, registerables } from 'chart.js';
+import {Chart, registerables} from 'chart.js';
 import axios from "axios";
 import {HistoricalChart} from "../config/api";
+
 Chart.register(...registerables);
 
-const CoinInfo = ({}) => {
+const CoinInfo = ({ data}) => {
     const [days, setDays] = useState(1);
     const [coin, setCoin] = useState();
+    const items = createSelectItems(data);
 
-   const fetchHistoricData = async () => {
-        const { data } = await axios.get(HistoricalChart("bitcoin", days));
-        console.log(data);
+    const [selectedCurrency, setSelectedCurrency] = useState("bitcoin");
+
+    const fetchHistoricData = async () => {
+        const { data } = await axios.get(HistoricalChart(selectedCurrency.toLowerCase(), days));
         setCoin(data.prices);
     };
 
     useEffect(() => {
         fetchHistoricData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [days]);
+    }, [days, coin]);
 
     const useStyles = makeStyles((theme) => ({
         container: {
-            width: "75%",
+            width: "100%",
+            height: "85%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            marginTop: 25,
-            padding: 40,
+            /*marginTop: 25,
+            padding: 40,*/
             [theme.breakpoints.down("md")]: {
                 width: "100%",
                 marginTop: 0,
-                padding: 20,
+                /*padding: 20,*/
                 paddingTop: 0,
             },
         },
@@ -45,7 +49,7 @@ const CoinInfo = ({}) => {
     const classes = useStyles();
 
     return (
-            //<div className={"lineChart"}>
+        //<div className={"lineChart"}>
         <div className={classes.container}>
             {!coin ? (
                 <CircularProgress
@@ -55,6 +59,12 @@ const CoinInfo = ({}) => {
                 />
             ) : (
                 <>
+                    <select className={"box"} name={"box"} id={"box"}
+                            onChange={(e) => {const selectOption = e.target.value; setSelectedCurrency(selectOption);
+                    }}>
+                        {console.log(selectedCurrency.toLowerCase())}
+                        {items}
+                    </select>
                     <Line
                         data={{
                             labels: coin.map((coin) => {
@@ -85,9 +95,8 @@ const CoinInfo = ({}) => {
                     <div
                         style={{
                             display: "flex",
-                            marginTop: 20,
                             justifyContent: "space-around",
-                            width: "100%",
+                            width: "100%", /*barre en dessous*/
                         }}
                     >
                         {chartDays.map((day) => (
@@ -105,5 +114,20 @@ const CoinInfo = ({}) => {
         </div>
     );
 };
+
+function createSelectItems(data) {
+    let items = [];
+    data.map((data, index) => (
+        items.push(<option key={index} value={data.name}>{data.name}</option>)
+    ))
+    return items;
+}
+
+/*function getSelectedOtpion() {
+    const value = document.getElementById('box').value
+    console.log("TEst", value);
+    //return document.querySelector('#box').value;
+}*/
+
 
 export default CoinInfo;

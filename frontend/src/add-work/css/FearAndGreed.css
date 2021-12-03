@@ -1,21 +1,31 @@
 
 .PieChartContainer{
-    width: 90%;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
 
+
 .PieChart{
-    position: absolute;
+    position: relative;
+    text-align: center;
+
 }
 
 .aiguille{
     transform: translate(-50%,-50%);
     position: absolute;
-    padding-top: 12%;
+    /*padding-top: 12%;*/
     transform-origin: bottom;
     z-index: 1;
+    padding-bottom: 20%;
+    padding-left: 17%;
+    
 }
 
 h1{
     margin-top: 0px;
-    margin-left: 10%;
 }
+
