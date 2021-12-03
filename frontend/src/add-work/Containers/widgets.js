@@ -13,9 +13,9 @@ export default class Widgets extends React.Component {
     }
 
     render() {
-        const { width, height, title, backText, widgetType, data } = this.props;
+        const { className, width, height, title, backText, widgetType, data } = this.props;
         return (
-            <div className='widget' style={{ width: width, height: height }}>
+            <div className={className || 'widget'} style={{ width: width, height: height }}>
                 <div className='widgets'>
                     <p className="TitleWid">{title}</p>
                     {getWidgetType(widgetType, data)}
@@ -33,9 +33,9 @@ function getWidgetType(wigetType, data) {
         return (
             <TableCoins coins={data} />
         )
-    }else if(wigetType==="NEWS"){
-        return(
-            <News news={data}/>
+    } else if (wigetType === "NEWS") {
+        return (
+            <News news={data} />
         )
     } else if (wigetType === "FEAR") {
         return (
@@ -49,7 +49,7 @@ function getWidgetType(wigetType, data) {
         )
     } else if (wigetType === "GRAPH") {
         return (
-            <CoinInfo data={data}/>
+            <CoinInfo data={data} />
             //<Graphique />
         )
     } else if (wigetType === "WHALE") {

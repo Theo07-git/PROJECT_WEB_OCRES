@@ -6,6 +6,19 @@
     
 }
 
+.widget3{
+    margin-left: 2%;
+    
+}
+
+.widget4{
+    margin-right: 2%;
+    
+}
+
+.widget2{
+    margin-left: 2%;
+}
 
 .widgetsContainer1{ /*TOP 10*/
     display: flex;
@@ -39,7 +52,6 @@
     flex-direction: row;
     /*margin-right: 1%;*/
     justify-content: space-around;
-    width: 45vw;
     
 }
 
@@ -50,11 +62,15 @@
     justify-content: space-around;   
 }
 
+.widget4{
+    margin-right: 2%;
+}
+
 @media screen and (max-width:1200px){ /*Première réduction*/
     .widgetsContainer2{ /*4 wid*/
         display: flex;
         flex-direction: column;
-        margin-top: 10% !important;
+        margin-top: 2%;
     }
 
     .widgetsContainer5{ /*NEWS AND FEAR*/
@@ -62,8 +78,6 @@
         display: flex;
         flex-direction: row;
         margin-bottom: 2%;
-        justify-content: start;
-
     }
 
     .widgetsContainer4{ /*TOP 10 + GRAPH*/
@@ -71,71 +85,166 @@
         flex-direction: row;
     }
 
-}
-@media screen and (max-width:1000px){ /*Deuxième reduction*/
-    .widgetsContainer4{
-        display: flex;
-        flex-direction: column;
+    .wid2{
+        width: 45vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+    } 
+
+    .wid3{
+        width: 45vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+    }
+
+    .wid4{
+        width: 45vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+    }
+
+    .wid6{
+        width: 45vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
     }
 }
+@media screen and (max-width:970px){ /*Deuxième reduction*/
 
-/*@media screen and (max-width:1000px){
-    .widgetsContainer4{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        justify-items: center;
-        
+    .widgetsContainer1{
+        margin-top: 4%;
     }
-
-    .widgetsContainer3{     /*ICIIIIIIIIII
-        justify-content: space-around;
-        margin-bottom: 3%;
-    }
-
     
-}
-*/
+    .widgetsContainer4{
+        display: flex;
+        flex-direction: column;
+    }
 
-/*@media screen and (max-width:1200px){
     .widgetsContainer2{
         display: flex;
         flex-direction: column;
-        
+        margin-top: 10%;
     }
 
     .widgetsContainer5{
         display: flex;
         flex-direction: column;
-        margin : 0 auto;
-        margin-bottom: 1%;
-        
     }
 
     .widgetsContainer6{
         display: flex;
-        flex-direction: column; 
-        margin : 0 auto;
-        margin-bottom: 1%;
+        flex-direction: column;
+    }
+
+    .widgetsContainer3{
+        margin-left: 2%;
+    }
+
+    .wid1{
+        width: 90vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+    }
+
+    .wid2{
+        width: 90vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+        margin-top: 2%;
+        
+    } 
+
+    .wid3{
+        width: 90vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+        margin-top: 2%;
         
     }
 
-}*/
-
-.widget1{
     
-}
-
-.widget3{
-    margin-left: 2%;
+        
     
+
+    .wid4{
+        width: 90vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+        margin-left: 2%;
+    }
+
+    .wid5{
+        width: 90vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+    }
+
+    .wid6{
+        width: 90vw !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        border-radius: 15px;
+        transition: 2s;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .widget4{
+        margin-right: 0%;
+    }
 }
 
-.widget4{
-    margin-right: 2%;
-}
+
+
 
 .widget1,.widget2,.widget3,.widget4,.widget5,.widget6{
+
+    /*flip card*/
+    transform-style: preserve-3d;
+    transition: 1s;
+
+    box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
+}
+
+.wid1,.wid2,.wid3,.wid4,.wid5,.wid6{
 
     /*flip card*/
     transform-style: preserve-3d;
