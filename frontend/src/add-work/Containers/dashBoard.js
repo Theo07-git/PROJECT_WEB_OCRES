@@ -45,7 +45,7 @@ export default class DashBoard extends React.Component {
                 <div className='widgetsContainer4'>
                     <div className='widgetsContainer3'>
                         <div className={`widget5`} onClick={() => this.flipCard5()}>
-                            <Widgets width={"60vw"} height={"60vh"} title={"GRAPHIQUE"} backText={"Ce widget présente un graphique représentant une courbe. Cette dernière représente l'évolution du cours du Bitcoin au fil du temps. Le Bitcoin est la crypto-monnaie numéro 1 en terme de capitalisation boursière: il influence le cours des autres crypto-monnaies."} widgetType={"GRAPH"} />
+                            <Widgets width={"60vw"} height={"60vh"} title={"GRAPHIQUE"} backText={"Ce widget présente un graphique représentant une courbe. Cette dernière représente l'évolution du cours du Bitcoin au fil du temps. Le Bitcoin est la crypto-monnaie numéro 1 en terme de capitalisation boursière: il influence le cours des autres crypto-monnaies."} widgetType={"GRAPH"} data={top10Data}/>
                         </div>
                     </div>
 

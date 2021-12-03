@@ -13,11 +13,11 @@ export default class Widgets extends React.Component {
     }
 
     render() {
-        const { width, height, mediaWidth, title, backText, widgetType, data } = this.props;
+        const { width, height, title, backText, widgetType, data } = this.props;
         return (
             <div className='widget' style={{ width: width, height: height }}>
                 <div className='widgets'>
-                    <p class="TitleWid">{title}</p>
+                    <p className="TitleWid">{title}</p>
                     {getWidgetType(widgetType, data)}
                 </div>
                 <div className='widgets widarriere'>
@@ -49,7 +49,7 @@ function getWidgetType(wigetType, data) {
         )
     } else if (wigetType === "GRAPH") {
         return (
-            <CoinInfo />
+            <CoinInfo data={data}/>
             //<Graphique />
         )
     } else if (wigetType === "WHALE") {

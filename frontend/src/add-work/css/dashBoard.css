@@ -54,7 +54,7 @@
     .widgetsContainer2{ /*4 wid*/
         display: flex;
         flex-direction: column;
-        margin-top: 10%;
+        margin-top: 10% !important;
     }
 
     .widgetsContainer5{ /*NEWS AND FEAR*/
