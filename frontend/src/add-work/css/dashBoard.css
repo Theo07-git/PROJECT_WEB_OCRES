@@ -7,17 +7,21 @@
 }
 
 .widget3{
-    margin-left: 2%;
+    margin-left: 3%;
     
 }
 
 .widget4{
-    margin-right: 2%;
+    margin-left: 15%;
     
 }
 
 .widget2{
-    margin-left: 2%;
+    margin-left: 3%;
+}
+
+.widget6{
+    margin-left: 3%;
 }
 
 .widgetsContainer1{ /*TOP 10*/
@@ -30,8 +34,7 @@
 .widgetsContainer2{ /*NEWS + FEAR + CAPITALISATION + WHALE*/
     display: flex;
     flex-direction: row;
-    margin: 1%;
-    justify-content: space-around;
+    margin-top: 2%;
     
 }
 
@@ -44,15 +47,12 @@
 .widgetsContainer4{ /*TOP 10 + GRAPH*/
     display: flex;
     flex-direction: row;
-    
 }
 
 .widgetsContainer5{
     display: flex;
     flex-direction: row;
-    /*margin-right: 1%;*/
     justify-content: space-around;
-    
 }
 
 .widgetsContainer6{
@@ -62,11 +62,12 @@
     justify-content: space-around;   
 }
 
-.widget4{
-    margin-right: 2%;
-}
 
 @media screen and (max-width:1200px){ /*Première réduction*/
+    .widgetsContainer1{
+        margin-left: 3.5%;
+    }
+    
     .widgetsContainer2{ /*4 wid*/
         display: flex;
         flex-direction: column;
@@ -95,6 +96,10 @@
         transition: 2s;
     } 
 
+    .widget2{
+        margin-left: 0%;
+    }
+
     .wid3{
         width: 45vw !important;
         position: relative;
@@ -105,6 +110,10 @@
         transition: 2s;
     }
 
+    /*.widget3{
+        margin-left: 0%;
+    }*/
+
     .wid4{
         width: 45vw !important;
         position: relative;
@@ -113,6 +122,10 @@
         transform-style: preserve-3d;
         border-radius: 15px;
         transition: 2s;
+    }
+
+    .widget4{
+        margin-left: 0% ;
     }
 
     .wid6{
@@ -129,6 +142,7 @@
 
     .widgetsContainer1{
         margin-top: 4%;
+        margin-left: 2%;
     }
     
     .widgetsContainer4{
@@ -139,17 +153,18 @@
     .widgetsContainer2{
         display: flex;
         flex-direction: column;
-        margin-top: 10%;
     }
 
     .widgetsContainer5{
         display: flex;
         flex-direction: column;
+        margin-left: 2%;
     }
 
     .widgetsContainer6{
         display: flex;
         flex-direction: column;
+        margin-left: 2%;
     }
 
     .widgetsContainer3{
@@ -178,6 +193,10 @@
         
     } 
 
+    .widget2{
+        width: 90vw !important;
+    }
+
     .wid3{
         width: 90vw !important;
         position: relative;
@@ -190,9 +209,10 @@
         
     }
 
-    
-        
-    
+    .widget3{
+        margin-left: 0%;
+        width: 90vw !important;
+    }
 
     .wid4{
         width: 90vw !important;
@@ -202,7 +222,11 @@
         transform-style: preserve-3d;
         border-radius: 15px;
         transition: 2s;
-        margin-left: 2%;
+    }
+
+    .widget4{
+        margin-left: 0%;
+        width: 90vw !important;
     }
 
     .wid5{
@@ -224,11 +248,11 @@
         border-radius: 15px;
         transition: 2s;
         margin-top: 2%;
-        margin-left: 2%;
     }
 
-    .widget4{
-        margin-right: 0%;
+    .widget6{
+        margin-left: 0%;
+        width: 90vw !important;
     }
 }
 
@@ -240,7 +264,7 @@
     /*flip card*/
     transform-style: preserve-3d;
     transition: 1s;
-
+    border-radius: 15px;
     box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
 }
 
@@ -249,7 +273,7 @@
     /*flip card*/
     transform-style: preserve-3d;
     transition: 1s;
-
+    border-radius: 15px;
     box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
 }
 

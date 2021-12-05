@@ -37,7 +37,7 @@ export default class FearAndGreed extends React.Component {
         return (
             <div className={"PieChartContainer"}>
 
-                <img className={"aiguille"} src={img} width={"10%"} height={"32%"} style={{ transform: `rotateZ(${angle}deg)` }} />
+                <img className={"aiguille"} src={img} width={"auto"} height={"32%"} style={{ transform: `rotateZ(${angle}deg)` }} />
 
                 <PieChart width={310} height={150} onMouseEnter={this.onPieEnter}>
                     <Pie

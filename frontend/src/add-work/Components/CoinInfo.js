@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {Line} from 'react-chartjs-2'
-import {CircularProgress, makeStyles} from "@material-ui/core";
-import {chartDays} from "../config/data";
+import React, { useEffect, useState } from 'react';
+import { Line } from 'react-chartjs-2'
+import { CircularProgress, makeStyles } from "@material-ui/core";
+import { chartDays } from "../config/data";
 import SelectButton from "./SelectButton";
 
-import {Chart, registerables} from 'chart.js';
+import { Chart, registerables } from 'chart.js';
 import axios from "axios";
-import {HistoricalChart} from "../config/api";
+import { HistoricalChart } from "../config/api";
 
 Chart.register(...registerables);
 
-const CoinInfo = ({ data}) => {
+const CoinInfo = ({ data }) => {
     const [days, setDays] = useState(1);
     const [coin, setCoin] = useState();
     const items = createSelectItems(data);
@@ -29,14 +29,13 @@ const CoinInfo = ({ data}) => {
 
     const useStyles = makeStyles((theme) => ({
         container: {
-            width: "100%",
-            height: "85%",
+            position: "relative",
+            margin: "auto",
+            width: "60vw",
+            height: "50vh",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
-            /*marginTop: 25,
-            padding: 40,*/
             [theme.breakpoints.down("md")]: {
                 width: "100%",
                 marginTop: 0,
@@ -60,8 +59,9 @@ const CoinInfo = ({ data}) => {
             ) : (
                 <>
                     <select className={"box"} name={"box"} id={"box"}
-                            onChange={(e) => {const selectOption = e.target.value; setSelectedCurrency(selectOption);
-                    }}>
+                        onChange={(e) => {
+                            const selectOption = e.target.value; setSelectedCurrency(selectOption);
+                        }}>
                         {console.log(selectedCurrency.toLowerCase())}
                         {items}
                     </select>
@@ -85,6 +85,7 @@ const CoinInfo = ({ data}) => {
                             ],
                         }}
                         options={{
+                            /*responsive: false,*/
                             elements: {
                                 point: {
                                     radius: 1,
@@ -96,7 +97,7 @@ const CoinInfo = ({ data}) => {
                         style={{
                             display: "flex",
                             justifyContent: "space-around",
-                            width: "100%", /*barre en dessous*/
+                            width: "100%",/*barre en dessous*/
                         }}
                     >
                         {chartDays.map((day) => (
@@ -110,8 +111,10 @@ const CoinInfo = ({ data}) => {
                         ))}
                     </div>
                 </>
-            )}
-        </div>
+            )
+            }
+
+        </div >
     );
 };
 

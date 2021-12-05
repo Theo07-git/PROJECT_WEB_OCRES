@@ -1,6 +1,5 @@
 .PieChart{
     position: relative;
-    text-align: center;
 }
 
 h1{
@@ -10,13 +9,6 @@ h1{
 .PieChartContainer2{
     display: flex; 
     justify-content: center; 
-    align-items: center;
-    margin-left: 30%;
-  
-    
 }
 
-.Legend{
-    padding-left: 30%;
-    background-color: cornflowerblue;
-}
+

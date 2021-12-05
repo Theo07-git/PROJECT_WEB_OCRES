@@ -54,14 +54,13 @@ export default class Capitalisation extends React.Component {
                 <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
                     <Pie
                         data={capData}
-                        cx={150}
-                        cy={80}
+                        cx={'50%'}
+                        cy={'40%'}
                         innerRadius={40}
                         outerRadius={80}
                         fill="#8884d8"
                         paddingAngle={0}
                         dataKey="value"
-
                     >
                         {data.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -69,7 +68,17 @@ export default class Capitalisation extends React.Component {
                         ))}
                     </Pie>
                     `<Tooltip content={<this.CustomTooltip />} width={"200%"} />`
-                    <Legend text-align={"center"} width={"60%"} />
+                    <Legend
+                        verticalAlign="top"
+                        horizontalAlign="middle"
+                        align="center"
+                        layout="horizontal"
+                        width="60%"
+
+                        wrapperStyle={{
+                            paddingLeft: "20%"
+                        }}
+                    />
                 </PieChart>
             </div>
         );

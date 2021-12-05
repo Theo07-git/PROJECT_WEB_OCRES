@@ -1,14 +1,15 @@
-.lineChart{
-    width: 75%;
+/*.lineChart{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 25px;
     padding: 40px;
-}
+}*/
 
 .box{
     position: relative;
     left: 80%;
 }
+
