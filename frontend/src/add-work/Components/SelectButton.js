@@ -13,6 +13,7 @@ const SelectButton = ({ children, selected, onClick }) => {
             cursor: "pointer",
             backgroundColor: selected ? "gold" : "",
             color: selected ? "black" : "",
+            fontSize: "70%",
             fontWeight: selected ? 700 : 500,
             "&:hover": {
                 backgroundColor: "gold",

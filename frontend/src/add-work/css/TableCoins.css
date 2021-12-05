@@ -10,20 +10,23 @@
     border-collapse: collapse;
     /*table-layout: fixed; */
 }
+
+
+
 th, td{
     border: 1px none white;
     border-bottom-style: solid;
 }
 
 
-.text-sucess{
+.positif{
     color: green;
     text-align: end;
     padding-right: 4%;
     
 }
 
-.text-danger{
+.negatif{
     color: red;
     text-align: end;
     padding-right: 4%;
@@ -39,9 +42,54 @@ th, td{
 
 }
 
+
+
 .namecrypto{
     margin-left: 30%;
     justify-content: top;
+}
+
+@media screen and (max-width:970px){
+    .table{
+        font-size: 100%;
+    } 
+
+    .logo-nom{
+        width: 33%;
+    }
+
+    .prix{
+        text-align: end;
+        padding-right: 10%;
+    }
+
+    .negatif{
+       padding-right: 15%; 
+    }
+
+    .positif{
+        padding-right: 15%; 
+    }
+}
+
+@media screen and (max-width:562px){
+    .table{
+        font-size: 80%;
+    } 
+
+    .logo-nom{
+        width: 33%;
+    }
+
+    .prix{
+        text-align: end;
+    }
+}
+
+@media screen and (max-width:427px){
+    .table{
+        font-size: 60%;
+    } 
 }
 
 

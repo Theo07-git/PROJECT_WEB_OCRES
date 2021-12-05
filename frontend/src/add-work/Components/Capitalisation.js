@@ -51,32 +51,45 @@ export default class Capitalisation extends React.Component {
 
         return (
             <div className={"PieChartContainer2"}>
-                <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
+                <PieChart width={320} height={200} horizontalAlign={"center"} onMouseEnter={this.onPieEnter}>
                     <Pie
                         data={capData}
-                        cx={'50%'}
+                        cx={'62%'}
                         cy={'40%'}
-                        innerRadius={40}
-                        outerRadius={80}
+                        innerRadius={"40%"}
+                        outerRadius={"80%"}
                         fill="#8884d8"
                         paddingAngle={0}
                         dataKey="value"
+                        options={{
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            elements: {
+                                point: {
+                                    radius: 1,
+                                },
+                            },
+                        }}
                     >
                         {data.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
 
                         ))}
+
                     </Pie>
                     `<Tooltip content={<this.CustomTooltip />} width={"200%"} />`
                     <Legend
-                        verticalAlign="top"
-                        horizontalAlign="middle"
-                        align="center"
-                        layout="horizontal"
-                        width="60%"
+                        verticalAlign="center"
+                        horizontalAlign="right"
+                        /*align="center"*/
+                        layout="vertical"
+                        width="90%"
 
                         wrapperStyle={{
-                            paddingLeft: "20%"
+                            width: "90%",
+                            marginLeft: "10%",
+                            fontSize: "2vh",
+                            paddingRight: "0%",
                         }}
                     />
                 </PieChart>

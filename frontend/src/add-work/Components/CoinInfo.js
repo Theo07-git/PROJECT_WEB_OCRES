@@ -31,8 +31,8 @@ const CoinInfo = ({ data }) => {
         container: {
             position: "relative",
             margin: "auto",
-            width: "60vw",
-            height: "50vh",
+            width: "100%",
+            height: "65%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -85,7 +85,8 @@ const CoinInfo = ({ data }) => {
                             ],
                         }}
                         options={{
-                            /*responsive: false,*/
+                            responsive: true,
+                            maintainAspectRatio: false,
                             elements: {
                                 point: {
                                     radius: 1,
@@ -98,6 +99,7 @@ const CoinInfo = ({ data }) => {
                             display: "flex",
                             justifyContent: "space-around",
                             width: "100%",/*barre en dessous*/
+                            height: "20%",
                         }}
                     >
                         {chartDays.map((day) => (

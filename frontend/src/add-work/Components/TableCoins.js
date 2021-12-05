@@ -27,7 +27,7 @@ const TableCoins = ({ coins }) => {
                             <span className='namecrypto'>{coin.name}</span>
                         </td>
                         <td className='prix'>${coin.current_price}</td>
-                        <td className={coin.price_change_percentage_24h > 0 ? 'text-sucess' : 'text-danger'}>
+                        <td className={coin.price_change_percentage_24h > 0 ? 'positif' : 'negatif'}>
                             {Number(coin.price_change_percentage_24h).toFixed(2)}%</td>
                     </tr>
                 ))}

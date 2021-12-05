@@ -38,7 +38,12 @@
 
 .TitleWid{
     color: cornflowerblue;
-    font-size: 150%;
+    font-size: 90%;
     text-align: center;
 }
 
+@media screen and (max-width:400px){
+    .backText{
+        font-size: 80%;
+    }
+}

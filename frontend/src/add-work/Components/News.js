@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/News.css"
-import {CircularProgress} from "@material-ui/core";
+import { CircularProgress } from "@material-ui/core";
 
 export default class News extends React.Component {
     constructor(props) {
@@ -28,12 +28,14 @@ export default class News extends React.Component {
                 ) : (
                     <>
                         <div className={"news"}>
-                            <div className={"titleImg"}>
-                                <img className={"picture"} src={articles[random].urlToImage} alt=""/>
-                                <h4>{articles[random].title}</h4>
+                            <div className={"imgArt"}>
+                                <div className={"titleImg"}>
+                                    <img className={"picture"} src={articles[random].urlToImage} alt="" />
+                                    <h4>{articles[random].title}</h4>
+                                </div>
+                                <p className='article'>{articles[random].description}</p>
                             </div>
-                            <p>{articles[random].description}</p>
-                            <footer>{articles[random].author}</footer>
+                            <footer className='auteur'>{articles[random].author}</footer>
                         </div>
 
 
@@ -52,13 +54,13 @@ export default class News extends React.Component {
 
 function getArticles(news) {
     const articles = [];
-    if(!news){
+    if (!news) {
         return articles;
     }
 
-    news.map(({title, urlToImage, description, author}) =>
-        (
-            articles.push({ title: title, urlToImage: urlToImage, description: description, author: author })
-        ))
+    news.map(({ title, urlToImage, description, author }) =>
+    (
+        articles.push({ title: title, urlToImage: urlToImage, description: description, author: author })
+    ))
     return articles;
 }
