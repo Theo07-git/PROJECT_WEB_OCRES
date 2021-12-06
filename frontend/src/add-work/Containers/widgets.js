@@ -6,6 +6,7 @@ import FearAndGreed from "../Components/FearAndGreed";
 import Graphique from "../Components/Graphique";
 import CoinInfo from "../Components/CoinInfo";
 import News from "../Components/News";
+import WhaleAlert from '../Components/WhaleAlert';
 
 export default class Widgets extends React.Component {
     constructor(props) {
@@ -54,7 +55,7 @@ function getWidgetType(wigetType, data) {
         )
     } else if (wigetType === "WHALE") {
         return (
-            <h1>Job still To Be Done</h1>
+            <WhaleAlert whale={data} />
         )
     }
 }

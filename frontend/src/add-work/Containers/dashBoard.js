@@ -38,7 +38,7 @@ export default class DashBoard extends React.Component {
     }
 
     render() {
-        const { top10Data, fear, news } = this.props;
+        const { top10Data, fear, news, whale } = this.props;
         return (
             <div className='widgetsContainerprinc'>
                 <p className='Title'>DASHBOARD CRYPTO</p>
@@ -71,7 +71,7 @@ export default class DashBoard extends React.Component {
                             <Widgets className={'wid4'} id={"wid4"} width={"22vw"} height={"40vh"} title={"CAPITALISATION"} backText={"Ce widget présente un diagramme circulaire représentant les 10 plus grosses cryptomonnaies selon leur taille en capitalisation boursière."} widgetType={"CAP"} data={top10Data} />
                         </div>
                         <div className={`widget6 ${this.state.isCardFliped6 ? 'flip' : ''}`} onClick={() => this.flipCard6()}>
-                            <Widgets className={'wid6'} width={"22vw"} height={"40vh"} title={"WHALE ALERT"} backText={"Ce widget présente des messages indiquant les transactions importantes et intéressantes au fur et à mesure qu'elles se produisent. Il permet de savoir quand les gros portefeuilles font des transactions."} widgetType={"WHALE"} data={top10Data} />
+                            <Widgets className={'wid6'} width={"22vw"} height={"40vh"} title={"WHALE ALERT"} backText={"Ce widget présente des messages indiquant les transactions importantes et intéressantes au fur et à mesure qu'elles se produisent. Il permet de savoir quand les gros portefeuilles font des transactions."} widgetType={"WHALE"} data={whale} />
                         </div>
                     </div>
                 </div>
