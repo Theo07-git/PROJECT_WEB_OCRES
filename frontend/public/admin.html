@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div id="reservation">
+        <div class="Creation">
+            <h1>Creation</h1>
+            <form method="post" id="form">
+                <div class="form">
+                    <label for="numUnity">Unity number:</label><br>
+                    <input type="text" id="numUnity" name="numUnity" value="" placeholder="1 000" autofocus><br><br>
+
+                    <label for="cryptoCurrency">Crypto Currency:</label><br>
+                    <input type="text" id="cryptoCurrency" name="cryptoCurrency" value="" placeholder="BTC"><br><br>
+
+                    <label for="value">Value in USD:</label><br>
+                    <input type="text" id="value" name="value" value="" placeholder="10 000 000"><br><br>
+
+                    <label for="message">Your message:</label><br>
+                    <textarea name="message" id="message" rows="10" cols="30"
+                        placeholder="Tranfered from Binance to  Unknown"></textarea><br><br>
+                    <input type="submit" value="Creation"><br><br>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="Research">
+            <h1>Research</h1>
+            <form method="post" id="form">
+                <select class="box" name="box" id="box">
+                    {items}
+                </select>
+
+                <select class="box" name="box" id="box">
+                    {items}
+                </select>
+
+                <input type="submit" value="Research"><br><br>
+
+            </form>
+        </div>
+
+        <div class="Update">
+            <h1>Update</h1>
+            <form method="post" id="form">
+                <div class="form">
+                    <label for="id">ID:</label><br>
+                    <input type="text" id="id" name="id" value="" placeholder="61aa02a6bbb85e148cadc6c9"
+                        autofocus><br><br>
+
+                    <label for="numUnity">Unity number:</label><br>
+                    <input type="text" id="numUnity" name="numUnity" value="" placeholder="1 000" autofocus><br><br>
+
+                    <label for="cryptoCurrency">Crypto Currency:</label><br>
+                    <input type="text" id="cryptoCurrency" name="cryptoCurrency" value="" placeholder="BTC"><br><br>
+
+                    <label for="value">Value in USD:</label><br>
+                    <input type="text" id="value" name="value" value="" placeholder="10 000 000"><br><br>
+
+                    <label for="message">Your message:</label><br>
+                    <textarea name="message" id="message" rows="10" cols="30"
+                        placeholder="Tranfered from Binance to  Unknown"></textarea><br><br>
+                    <input type="submit" value="Update"><br><br>
+                </div>
+            </form>
+        </div>
+
+        <div class="Delete">
+            <h1>Delete</h1>
+            <form method="post" id="form">
+                <div class="form">
+                    <label for="id">ID:</label><br>
+                    <input type="text" id="idDelete" name="id" value="" placeholder="61aa02a6bbb85e148cadc6c9"
+                        autofocus><br><br>
+
+                    <input type="submit" value="Delete" onClick="deleteMsg()"><br><br>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function deleteMsg() {
+        var id = document.getElementById("idDelete").value;
+
+        alert(id);
+    }
+</script>

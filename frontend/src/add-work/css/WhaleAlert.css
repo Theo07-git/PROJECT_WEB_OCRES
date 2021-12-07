@@ -1,6 +1,68 @@
 .whaleAlert{
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
     width: 80%;
-    height: 200px;
+    height: 300px;
     scroll-behavior: smooth;
+    /*margin-right: 0;
+    margin-left: 0;*/
+    margin-left: 10%;
+    /*border : 3px solid gold;
+    border-radius: 10px;*/
+}
+
+.whaleAlert::-webkit-scrollbar {
+    display: none;
+    }
+
+.title{
+    display:flex;
+    flex-direction: row;
+}
+
+.msg{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 120%;
+}
+
+.ligne1{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: black;
+    font-size: 120%;
+}
+
+.img{
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 0px;
+    border-radius: 10px;
+    width: 80%;
+    border : 3px solid gold;
+}
+
+@media screen and (max-width:1500px){
+    .whaleAlert{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:970px){
+    .whale{
+        width:80%;
+    }
+}
+
+@media screen and (max-width:530px){
+    .whale{
+        width: 100%;
+    }
+
 }

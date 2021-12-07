@@ -62,7 +62,7 @@ const CoinInfo = ({ data }) => {
                         onChange={(e) => {
                             const selectOption = e.target.value; setSelectedCurrency(selectOption);
                         }}>
-                        {console.log(selectedCurrency.toLowerCase())}
+                        {/*console.log(selectedCurrency.toLowerCase())*/}
                         {items}
                     </select>
                     <Line

@@ -1,11 +1,23 @@
 import React from "react";
 import "../css/WhaleAlert.css"
 import { CircularProgress } from "@material-ui/core";
+import API from "../config/APIH";
+import axios from "axios";
+
+
 
 export default class WhaleAlert extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    // handle() {
+    //     axios.delete(`http://localhost:3000/delete/${id}`)
+    //         .then(res => {
+    //             console.log(res)
+    //         })
+
+    // }
 
     render() {
         const { whale } = this.props;
@@ -33,10 +45,8 @@ export default class WhaleAlert extends React.Component {
                                     <div className={"whale"}>
                                         <div className={"img"}>
                                             <div className={"title"}>
-                                                <p>{whale.numUnity}</p>
-                                                <p>{whale.name}</p>
+                                                <p className={"ligne1"}>{whale.numUnity} {whale.name} ( $ {whale.value} )</p>
                                             </div>
-                                            <p className='valeur'>{whale.value}</p>
                                             <p className='msg'>{whale.message}</p>
                                         </div>
                                         <footer className='date'>{whale.date}</footer>

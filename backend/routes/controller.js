@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const ObjectID = require('mongoose').Types.ObjectId;
+const app = express();
 
 const { PostsModel } = require('../models/model');
 
@@ -11,6 +12,10 @@ router.get('/', (req, res) => {
     })
 });
 
+/*router.getFiltered('/', () =>
+    PostsModel.find({ "name": "BTC" })
+)*/
+
 router.post('/', (req, res) => {
     const newRecord = new PostsModel({
         numUnity: req.body.numUnity,
@@ -20,7 +25,7 @@ router.post('/', (req, res) => {
     });
 
     newRecord.save((err, docs) => {
-        if(!err) res.send(docs);
+        if (!err) res.send(docs);
         else console.log('Error creating new data : ' + err);
     })
 });
@@ -29,7 +34,7 @@ router.post('/', (req, res) => {
 router.put("/:id", (req, res) => {
     if (!ObjectID.isValid(req.params.id))
         return res.status(400).send("ID unknow : " + req.params.id)
-    
+
     const updateRecord = {
         numUnity: req.body.numUnity,
         name: req.body.name,
@@ -39,8 +44,8 @@ router.put("/:id", (req, res) => {
 
     PostsModel.findByIdAndUpdate(
         req.params.id,
-        { $set: updateRecord},
-        { new: true},
+        { $set: updateRecord },
+        { new: true },
         (err, docs) => {
             if (!err) res.send(docs);
             else console.log('Update error : ' + err);
@@ -48,10 +53,10 @@ router.put("/:id", (req, res) => {
     )
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/delete/:id", (req, res) => {
     if (!ObjectID.isValid(req.params.id))
         return res.status(400).send("ID unknow : " + req.params.id)
-    
+
     PostsModel.findByIdAndRemove(
         req.params.id,
         (err, docs) => {
@@ -60,5 +65,13 @@ router.delete("/:id", (req, res) => {
         }
     )
 });
+
+
+/*router.delete('/delete', async (req, res) => {
+    await client.connect();
+    let myquery = { id: req.query.id };
+    await PostsModel.deleteOne(myquery)
+    await client.close()
+});*/
 
 module.exports = router
