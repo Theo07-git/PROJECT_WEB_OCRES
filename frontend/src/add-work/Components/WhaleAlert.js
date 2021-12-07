@@ -23,8 +23,6 @@ export default class WhaleAlert extends React.Component {
         const { whale } = this.props;
         let articles = [];
 
-        const random = Math.floor(Math.random() * 9);
-
         console.log("Whale : ", whale);
 
         articles = getArticles(whale);
@@ -49,7 +47,6 @@ export default class WhaleAlert extends React.Component {
                                             </div>
                                             <p className='msg'>{whale.message}</p>
                                         </div>
-                                        <footer className='date'>{whale.date}</footer>
                                     </div>
                                 )
                             }

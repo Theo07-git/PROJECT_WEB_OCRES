@@ -17,12 +17,17 @@ export default class DashBoard extends React.Component {
                         <input type="text" id="idDelete" name="id" value="" placeholder="61aa02a6bbb85e148cadc6c9"
                             autofocus>
                         </input>
-                        <input type="submit" value="Delete" onClick="deleteMsg()"></input>
+                        <input type="submit" value="Delete" onClick={deleteMsg()}></input>
                     </div>
                 </form>
             </div>
         )
     }
+}
+
+function deleteMsg() {
+    var id = document.getElementById("idDelete").value;
+    alert(id);
 }
 
 
